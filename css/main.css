@@ -1,10 +1,16 @@
 * {
 	font-family: 'Open Sans', sans-serif;
+	background-image: url('../images/mfw.png');
 }
 
 main {
 	margin-top: 50px;
 	text-align: center;
+}
+
+#instruments {
+	margin-top: 25px;
+	margin-bottom: 25px;
 }
 
 #title {
@@ -40,7 +46,7 @@ main {
 
 #int-display {
 	position: absolute;
-	top: 325px;
+	top: 475px;
 	left: 0px;
 	width: 100%;
 }
