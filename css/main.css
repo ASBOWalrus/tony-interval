@@ -1,0 +1,31 @@
+* {
+	font-family: 'Open Sans', sans-serif;
+}
+
+main {
+	margin-top: 50px;
+	text-align: center;
+}
+
+#play-btn {
+	position: relative;
+	top: 0;
+	margin-top: 25px;
+	margin-bottom: 0;
+	padding: 10px 20px;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: #fff;
+	border: 2px solid #000;
+	border-radius: 10px;
+	box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+#play-btn:hover {
+	background-color: #ccc;
+}
+
+#play-btn:active {
+	box-shadow: none;
+	top: 2px;
+}

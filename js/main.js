@@ -29,18 +29,60 @@ $(document).ready(function() {
 		if(i2 + 1 > i1)
 		{
 			var ivl = i2 - i1 + 1;
+
+			if(ivl == 2)
+			{
+				ivl += "nd";
+			}
+			else if(ivl == 3)
+			{
+				ivl += "rd";
+			}
+			else
+			{
+				ivl += "th";
+			}
+
+			var audio1 = new Audio(loc + note1 + ext);
+			var audio2 = new Audio(loc + note2 + ext);
+
+			audio1.play();
+
+			audio1.addEventListener('ended', function() {
+				audio2.play();
+			});
+
+			$('#notes-played').html(note1 + " " + note2);
+			$('#int-played').html(ivl);
 		}
 		else if(i1 > i2)
 		{
-			var ivl = 0 - (i1 - i2 + 1);
+			var ivl = i1 - i2 + 1;
+
+			if(ivl == 2)
+			{
+				ivl += "nd";
+			}
+			else if(ivl == 3)
+			{
+				ivl += "rd";
+			}
+			else
+			{
+				ivl += "th";
+			}
+
+			var audio1 = new Audio(loc + note2 + ext);
+			var audio2 = new Audio(loc + note1 + ext);
+
+			audio1.play();
+
+			audio1.addEventListener('ended', function() {
+				audio2.play();
+			});
+
+			$('#notes-played').html(note2 + " " + note1);
+			$('#int-played').html(ivl);
 		}
-
-		new Audio(loc + note1 + ext).play();
-
-		setTimeout(function() {
-			new Audio(loc + note2 + ext).play();
-		}, 3000);
-
-		console.log(note1 + " " + note2 + " " + ivl);
 	});
 });
